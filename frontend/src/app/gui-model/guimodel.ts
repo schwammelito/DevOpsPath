@@ -166,6 +166,146 @@ export class GuiModel {
                     ]
                 },
                 {
+                    "id": "ModuleForm",
+                    "title": { default: "Modul" },
+                    "url": "/module",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": "Name",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": "Description",
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "locationForm",
+                    "title": { default: "Standort" },
+                    "url": "/location",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": "Name",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": "Description",
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "restaurantForm",
+                    "title": { default: "Restaurant" },
+                    "url": "/restaurant",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": "Name",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": "Description",
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "tramstationForm",
+                    "title": { default: "Tramstation" },
+                    "url": "/tramstation",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": "Name",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": "Description",
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
                     "id": "PatientForm",
                     "title": "Patient",
                     "url": "/patient",
@@ -1493,7 +1633,7 @@ export class GuiModel {
                         {
                             "type": "pageLabel",
                             "value": "<h4>Willkommen bei DevOps</h4>",
-                            "newRow": true
+                            "newRow": true,
                         },
                         {
                             "type": "button",
@@ -1503,6 +1643,47 @@ export class GuiModel {
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Modul" },
+                            "icon": "fa-book",
+                            "color": "blue",
+                            "page": "modulePage",
+                            "width": 2,
+                            "newRow": false,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Standort" },
+                            "icon": "fa-map",
+                            "color": "yellow",
+                            "page": "locationPage",
+                            "width": 2,
+                            "newRow": false,
+                        },
+                        {
+                            "type": "pageLabel",
+                            "value": "<h4>Weitere Applikationen</h4>",
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Restaurants" },
+                            "icon": "fa-pizza-slice",
+                            "color": "silver",
+                            "page": "RestaurantsPage",
+                            "width": 3,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Tramstationen" },
+                            "icon": "fa-train",
+                            "color": "silver",
+                            "page": "TramstationenPage",
+                            "width": 3,
+                            "newRow": false,
                         },
                     ]
                 },
@@ -1515,7 +1696,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "NewStudyProgram",
-                            "icon": "fa-user",
+                            "icon": "fa-plus",
                             "color": "green",
                             "width": 2,
                             "form" : {
@@ -1532,7 +1713,79 @@ export class GuiModel {
                             "form": {
                                 "form": "StudyProgramForm"
                             }
-                        }
+                        },
+                    ]
+                },
+                {
+                    "id": "modulePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neues Modul" },
+                            "icon": "fa-plus",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "ModuleForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "locationPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neuer Standort" },
+                            "icon": "fa-plus",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "locationForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "RestaurantsPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neues Restaurant" },
+                            "icon": "fa-plus",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "restaurantForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "TramstationenPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neue Tramstation" },
+                            "icon": "fa-plus",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "tramstationForm"
+                            }
+                        },
                     ]
                 },
                 {
