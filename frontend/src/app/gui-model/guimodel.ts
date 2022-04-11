@@ -1744,7 +1744,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": { default: "Neuer Standort" },
                             "icon": "fa-plus",
-                            "color": "green",
+                            "color": "wet-asphalt",
                             "width": 2,
                             "form" : {
                                 "form" : "locationForm"
