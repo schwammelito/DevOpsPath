@@ -168,7 +168,7 @@ export class GuiModel {
                 {
                     "id": "ModuleForm",
                     "title": { default: "Modul" },
-                    "url": "/module",
+                    "url": "/module", // TODO create classes in backend otherwise there is a error in frontend (because no entity in backend)
                     "formFieldList": [
                         {
                             "id":   "name",
