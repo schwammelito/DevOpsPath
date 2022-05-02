@@ -10,13 +10,13 @@ export class GuiModel {
                     "title": "NotImplemented",
                     "formFieldList": [
                         {
-                            "type": "okButton",
+                            "type": 'okButton',
                             "name": "Ok"
                         }
                     ]
                 },
                 {
-                    "id": "NotImplementedForm",
+                    "id": 'NotImplementedForm',
                     "title": "Not Implemented",
                     "url": "/dummyform",
                     "headerVisible": false,
