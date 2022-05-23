@@ -1685,6 +1685,20 @@ export class GuiModel {
                             "width": 3,
                             "newRow": false,
                         },
+                        {
+                            "type": "pageLabel",
+                            "value": "<h4>Impressum</h4>",
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "ZHAW" },
+                            "icon": "fa-school",
+                            "color": "blue",
+                            "page": "ZHAWPage",
+                            "width": 3,
+                            "newRow": false,
+                        },
                     ]
                 },
                 {
@@ -1785,6 +1799,38 @@ export class GuiModel {
                             "form" : {
                                 "form" : "tramstationForm"
                             }
+                        },
+                    ]
+                },
+                {
+                    "id": "ZHAWPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Gertrudstrasse 15" },
+                            "color": "blue",
+                            "width": 2,
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "8401 Winterthur" },
+                            "color": "blue",
+                            "width": 2,
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: " +41 (0) 58 934 71 71" },
+                            "color": "blue",
+                            "width": 2,
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "info@zhaw.ch" },
+                            "color": "blue",
+                            "width": 2,
                         },
                     ]
                 },
