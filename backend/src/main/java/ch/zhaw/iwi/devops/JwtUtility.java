@@ -19,12 +19,12 @@ public final class JwtUtility {
 	private static final String LANGUAGE_CODE = "languageCode";
 	private static final Logger logger = LoggerFactory.getLogger(JwtUtility.class);
 	private static final Key key = MacProvider.generateKey();
-	private static final int expirationDuration = 1000 * 1800;
+	private static final int EXPIRATIONDURATION = 1000 * 1800;
 
 	public static String createJsonWebToken(String userId, String languageCode) {
 		Claims claims = Jwts.claims().setSubject(userId);
 		claims.put(LANGUAGE_CODE, languageCode);
-		claims.setExpiration(new Date(System.currentTimeMillis() + expirationDuration));
+		claims.setExpiration(new Date(System.currentTimeMillis() + EXPIRATIONDURATION));
 		claims.setIssuedAt(new Date());
 		String compactJws = Jwts.builder().setClaims(claims).signWith(SignatureAlgorithm.HS512, key).compact();
 		return compactJws;

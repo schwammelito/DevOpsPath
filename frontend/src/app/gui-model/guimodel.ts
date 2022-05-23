@@ -10,13 +10,13 @@ export class GuiModel {
                     "title": "NotImplemented",
                     "formFieldList": [
                         {
-                            "type": "okButton",
+                            "type": 'okButton',
                             "name": "Ok"
                         }
                     ]
                 },
                 {
-                    "id": "NotImplementedForm",
+                    "id": 'NotImplementedForm',
                     "title": "Not Implemented",
                     "url": "/dummyform",
                     "headerVisible": false,
@@ -168,7 +168,7 @@ export class GuiModel {
                 {
                     "id": "ModuleForm",
                     "title": { default: "Modul" },
-                    "url": "/module",
+                    "url": "/module", // TODO create classes in backend otherwise there is a error in frontend (because no entity in backend)
                     "formFieldList": [
                         {
                             "id":   "name",
@@ -1639,7 +1639,16 @@ export class GuiModel {
                             "type": "button",
                             "name": { default: "Studiengang" },
                             "icon": "fa-file-alt",
-                            "color": "wet-asphalt",
+                            "color": "green",
+                            "page": "studyProgramPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Studiengang" },
+                            "icon": "fa-file-alt",
+                            "color": "red",
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
