@@ -10,13 +10,13 @@ export class GuiModel {
                     "title": "NotImplemented",
                     "formFieldList": [
                         {
-                            "type": "okButton",
+                            "type": 'okButton',
                             "name": "Ok"
                         }
                     ]
                 },
                 {
-                    "id": "NotImplementedForm",
+                    "id": 'NotImplementedForm',
                     "title": "Not Implemented",
                     "url": "/dummyform",
                     "headerVisible": false,
@@ -168,7 +168,7 @@ export class GuiModel {
                 {
                     "id": "ModuleForm",
                     "title": { default: "Modul" },
-                    "url": "/module",
+                    "url": "/module", // TODO create classes in backend otherwise there is a error in frontend (because no entity in backend)
                     "formFieldList": [
                         {
                             "id":   "name",
@@ -1639,7 +1639,16 @@ export class GuiModel {
                             "type": "button",
                             "name": { default: "Studiengang" },
                             "icon": "fa-file-alt",
-                            "color": "wet-asphalt",
+                            "color": "green",
+                            "page": "studyProgramPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Studiengang" },
+                            "icon": "fa-file-alt",
+                            "color": "red",
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
@@ -1682,6 +1691,20 @@ export class GuiModel {
                             "icon": "fa-train",
                             "color": "silver",
                             "page": "TramstationenPage",
+                            "width": 3,
+                            "newRow": false,
+                        },
+                        {
+                            "type": "pageLabel",
+                            "value": "<h4>Impressum</h4>",
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "ZHAW" },
+                            "icon": "fa-school",
+                            "color": "blue",
+                            "page": "ZHAWPage",
                             "width": 3,
                             "newRow": false,
                         },
@@ -1785,6 +1808,38 @@ export class GuiModel {
                             "form" : {
                                 "form" : "tramstationForm"
                             }
+                        },
+                    ]
+                },
+                {
+                    "id": "ZHAWPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Gertrudstrasse 15" },
+                            "color": "blue",
+                            "width": 2,
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "8401 Winterthur" },
+                            "color": "blue",
+                            "width": 2,
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: " +41 (0) 58 934 71 71" },
+                            "color": "blue",
+                            "width": 2,
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "info@zhaw.ch" },
+                            "color": "blue",
+                            "width": 2,
                         },
                     ]
                 },
