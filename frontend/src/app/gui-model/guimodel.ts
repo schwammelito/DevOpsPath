@@ -10,13 +10,13 @@ export class GuiModel {
                     "title": "NotImplemented",
                     "formFieldList": [
                         {
-                            "type": 'okButton',
+                            "type": "okButton",
                             "name": "Ok"
                         }
                     ]
                 },
                 {
-                    "id": 'NotImplementedForm',
+                    "id": "NotImplementedForm",
                     "title": "Not Implemented",
                     "url": "/dummyform",
                     "headerVisible": false,
@@ -1639,7 +1639,7 @@ export class GuiModel {
                             "type": "button",
                             "name": { default: "Studiengang" },
                             "icon": "fa-file-alt",
-                            "color": "red",
+                            "color": "green",
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
@@ -1648,7 +1648,16 @@ export class GuiModel {
                             "type": "button",
                             "name": { default: "Studiengang" },
                             "icon": "fa-file-alt",
-                            "color": "red",
+                            "color": "yellow",
+                            "page": "studyProgramPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Restaurants" },
+                            "icon": "fa-file-alt",
+                            "color": "black",
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
