@@ -1639,7 +1639,7 @@ export class GuiModel {
                             "type": "button",
                             "name": { default: "Studiengang" },
                             "icon": "fa-file-alt",
-                            "color": "green",
+                            "color": "red",
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
