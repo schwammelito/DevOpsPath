@@ -17,7 +17,7 @@ public class FizzBuzzConverterTest {
     public void fizzBuzzConvertor2() {
 
         FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
-        Assert.assertEquals("5", fizzBuzz.convert(2)); //this should no fail because test is wrong
+        Assert.assertEquals("2", fizzBuzz.convert(2));
 
     }
 
